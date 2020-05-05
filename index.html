@@ -14,15 +14,16 @@
 
       function onResize()
       {
-       
+        gameInstance.SendMessage("WebGLController","SetWidth",window.innerWidth);
+        gameInstance.SendMessage("WebGLController","SetHeight",window.innerHeight);
         gameInstance.SendMessage("WebGLController","OnResize");
 
       }
-
     </script>
   </head>
   <body style="margin:0;overflow: hidden;">
-    <div id="gameContainer"></div>
-    
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 1024px; height: 768px" ></div>
+    </div>
   </body>
 </html>
